@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* common classes and  attributes*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: calc(100% - 120px);
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.active {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* header start */
+header {
+    padding: 16px 0;
+    box-shadow: 0px 1.64744px 8.2372px 0px rgba(0, 0, 0, 0.10);
+    position: sticky;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+header .row .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .row .logo img {
+    width: 40px;
+}
+
+header .row .logo a {
+    color: #545BE8;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+
+header .row nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header .row nav ul a {
+    color: #101928;
+}
+
+header .row .auth {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header .row .auth a {
+    padding: 6px 35px;
+    border-radius: 4.119px;
+}
+
+header .row .auth .login {
+    border: 0.412px solid #545BE8;
+    color: #545BE8;
+}
+
+.register {
+    background-color: #545BE8;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+/* landing page start */
+/* 
+.landing-page {
+    margin-top: 80px;
+    background: #F5F5F5;
+    padding-bottom: 150px;
+}
+
+.landing-page .row .landing-img,
+.landing-page .row .text {
+    margin-top: -40px;
+    position: relative;
+
+}
+
+.landing-page .row .text .begin {
+    color: #545BE8;
+}
+
+.landing-page .row .text .begin span {
+    font-weight: 700;
+}
+
+.landing-page .row .text h1 {
+    font-weight: 700;
+    font-size: 55px;
+    margin-bottom: 8.5px;
+    color: #141E32;
+}
+
+.landing-page .row .text h1 span {
+    color: #545BE8;
+}
+
+
+.landing-page .row .text p {
+    color: #969696;
+    max-width: 500px;
+}
+
+.landing-page .row .landing-img {
+    text-align: end;
+}
+
+.landing-page .row .landing-img img {
+    width: 425px;
+}
+
+.landing-page .row .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    margin-top: 22px;
+}
+
+.landing-page .row .buttons .register {
+    padding: 6px 35px;
+    border-radius: 4.119px;
+}
+
+.landing-page .row .buttons .play-video {
+    font-weight: 700;
+    color: #141E32;
+    display: flex;
+    align-items: center;
+}
+
+.landing-page .row .buttons .play-video img {
+    width: 40px;
+    margin-right: 5px;
+}
+
+
+
+.services p {
+    max-width: 300px;
+} */
