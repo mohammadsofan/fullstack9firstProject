@@ -465,6 +465,18 @@ header .row .auth .login {
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10);
     padding: 20px;
     text-align: left;
+    position: relative;
+}
+
+.testimonials .testimonial::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    border-top: 90px solid rgba(128, 128, 128, 0.128);
+    border-left: 90px solid transparent;
 }
 
 .testimonials .testimonial .user {
