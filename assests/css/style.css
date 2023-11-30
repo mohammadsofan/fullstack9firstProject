@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* common classes and  attributes*/
@@ -96,19 +97,14 @@ header .row .auth .login {
 }
 
 /* landing page start */
-/* 
+
 .landing-page {
     margin-top: 80px;
     background: #F5F5F5;
-    padding-bottom: 150px;
+    padding: 40px 0 100px 0;
 }
 
-.landing-page .row .landing-img,
-.landing-page .row .text {
-    margin-top: -40px;
-    position: relative;
 
-}
 
 .landing-page .row .text .begin {
     color: #545BE8;
@@ -135,10 +131,6 @@ header .row .auth .login {
     max-width: 500px;
 }
 
-.landing-page .row .landing-img {
-    text-align: end;
-}
-
 .landing-page .row .landing-img img {
     width: 425px;
 }
@@ -160,6 +152,7 @@ header .row .auth .login {
     color: #141E32;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .landing-page .row .buttons .play-video img {
@@ -168,7 +161,419 @@ header .row .auth .login {
 }
 
 
+.services {
+    padding: 40px 0;
 
-.services p {
-    max-width: 300px;
-} */
+}
+
+.services .row {
+    gap: 20px;
+}
+
+.services .text {
+    width: calc(30% - 10px);
+}
+
+.services .text .begin {
+    color: #545BE8;
+    margin-bottom: 15px;
+}
+
+.services .text h2 {
+    font-size: 37px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.services .text p:last-of-type {
+    color: #969696;
+}
+
+.services .cards {
+    width: calc(70% - 10px);
+}
+
+.services .cards .row {
+    gap: 25px;
+}
+
+.services .cards .row .card {
+    width: calc((100% / 3) - 25px);
+    background: #545BE8;
+    padding: 40px 10px;
+    border-radius: 10px;
+    transition: .5s all;
+    position: relative;
+
+}
+
+.services .cards .row .card:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.services .cards .row .card svg {
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    box-sizing: content-box;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.services .cards .row .card h3 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.services .cards .row .card p {
+    color: #DDD;
+}
+
+.services .cards .row .card:last-of-type::after {
+    content: "Join Us!";
+    position: absolute;
+    top: 15%;
+    right: 10px;
+    padding: 5px 10px;
+    background: red;
+    color: white;
+    border-radius: 10px;
+    animation: joinUs alternate 1s infinite;
+}
+
+@keyframes joinUs {
+    0% {
+        transform: translateX(-10px);
+    }
+}
+
+
+
+.statistics {
+    background-color: #545BE8;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.statistics .statistics-img img {
+    width: 425px;
+}
+
+.statistics .text {
+    padding-right: 50px;
+}
+
+.statistics .text .begin {
+    color: #F0C932;
+    text-transform: uppercase;
+}
+
+.statistics .text h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.statistics .text p:last-of-type {
+    color: #ddd;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.statistics .text .numbers .row {
+    justify-content: flex-start;
+    gap: 100px;
+}
+
+.statistics .text .numbers .num {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.statistics .text .numbers .num span:first-of-type {
+    color: #F0C932;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.courses {
+    margin-top: 100px;
+}
+
+.courses .row {
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.courses .cards {
+    width: calc((100% - 50px) / 2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.courses .card {
+    width: calc((100% - 20px) / 2);
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.288);
+    border-radius: 15px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.courses .card .card-face img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    transition: .5s all;
+}
+
+.courses .card .card-face {
+    position: relative;
+    overflow: hidden;
+}
+
+.courses .card .card-face .text-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+
+}
+
+.courses .card .card-face .text-over span:first-of-type {
+    align-self: flex-start;
+    background-color: #545BE8;
+    padding: 10px 5px;
+    margin-top: 10px;
+
+}
+
+.courses .card .card-face .text-over span:last-of-type {
+    align-self: flex-end;
+    margin: 0 10px 10px 0;
+    font-weight: bold;
+}
+
+.courses .card .card-info {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.courses .card .card-info .row:first-of-type span {
+    color: #545BE8;
+}
+
+.courses .card .card-info .row:last-of-type {
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 12px;
+    color: #969696;
+}
+
+.courses .card.offer .card-face::after {
+    content: "Offer!";
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: red;
+    color: #fff;
+    transition: .5s all;
+    animation: offer 1s alternate infinite;
+}
+
+.courses .card:hover img {
+    transform: scale(1.3);
+
+}
+
+@keyframes offer {
+    0% {
+        border-radius: 47% 53% 49% 51% / 93% 5% 95% 7%;
+        transform: translateX(-10px);
+    }
+}
+
+.courses .text {
+    width: calc((100% - 50px) / 2);
+    align-self: flex-start;
+    padding-right: 50px;
+
+}
+
+.courses .text .begin {
+    color: #545BE8;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.courses .text h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.courses .text p:last-of-type {
+    color: #969696;
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+.courses .text a {
+    background: #545BE8;
+    padding: 10px 40px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+.testimonials {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 30px;
+}
+
+.testimonials .row {
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.testimonials .testimonial {
+    width: calc((100% - 20px) / 2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10);
+    padding: 20px;
+    text-align: left;
+}
+
+.testimonials .testimonial .user {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.testimonials .testimonial .user img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.testimonials .testimonial .user .user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials .testimonial .user .user-info span:first-of-type {
+    font-weight: bold;
+}
+
+.testimonials .testimonial .user .user-info span:last-of-type {
+    font-size: 14px;
+    color: #969696;
+}
+
+.testimonials .testimonial .stars {
+    display: flex;
+}
+
+.testimonials .testimonial .stars svg {
+    width: 24px;
+    color: #F0C932;
+}
+
+footer {
+    background: #393E46;
+    margin-top: 100px;
+    padding: 100px 0;
+    color: #fff;
+}
+
+footer>.row {
+    justify-content: flex-start;
+    gap: 50px;
+
+}
+
+footer .row .start-side,
+footer .row .end-side {
+    width: calc((100% - 50px) / 2);
+}
+
+footer .row .start-side {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+footer .row .start-side .logo {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .row .start-side .logo img {
+    width: 35px;
+}
+
+footer .row .start-side p {
+    color: #F4F4F4;
+}
+
+footer .row .start-side .social {
+    margin-top: 20px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+footer .row .start-side .social svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    box-sizing: content-box;
+    padding: 5px;
+}
+
+footer .end-side .row {
+    align-items: flex-start;
+}
+
+footer .end-side a {
+    color: #F4F4F4;
+}
+
+footer .end-side .row .col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer .end-side .row .col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
